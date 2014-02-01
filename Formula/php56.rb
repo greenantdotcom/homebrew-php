@@ -2,11 +2,24 @@ require File.join(File.dirname(__FILE__), 'abstract-php')
 
 class Php56 < AbstractPhp
   init
-  url 'http://downloads.php.net/tyrael/php-5.6.0alpha1.tar.bz2'
-  sha256 '17123fd1b07aa1cd16eedc9ae653dfbd560e2b7da95961f546334fda14bba804'
-  version '5.6.0alpha1'
+  
+  PHP_DOWNLOAD_URL='http://downloads.php.net/tyrael/php-5.6.0alpha1.tar.bz2'
+  
+  PHP_CHECKSUM    = {
+                      :md5    => '',
+                      :sha1   => '',
+                      :sha256 => '17123fd1b07aa1cd16eedc9ae653dfbd560e2b7da95961f546334fda14bba804'
+                    }
+  
+  # Per http://semver.org
+  PHP_VERSION     = '5.6.0-alpha.1'
+  PHP_BRANCH      = 'PHP-5.6'
+  
+  url     PHP_DOWNLOAD_URL
+  sha256  PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
-  head 'https://github.com/php/php-src.git', :branch => 'PHP-5.6'
+  head    'https://github.com/php/php-src.git', :branch => PHP_BRANCH
 
   # Leopard requires Hombrew OpenSSL to build correctly
   depends_on 'openssl' if MacOS.version == :leopard

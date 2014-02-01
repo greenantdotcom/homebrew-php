@@ -5,7 +5,7 @@ class Php56Pspell < AbstractPhp56Extension
   homepage 'http://php.net/manual/en/book.pspell.php'
   url 'http://downloads.php.net/tyrael/php-5.6.0alpha1.tar.bz2'
   sha256 '17123fd1b07aa1cd16eedc9ae653dfbd560e2b7da95961f546334fda14bba804'
-  version '6.0.0a1'
+  version '5.6.0a1'
 
   depends_on 'aspell'
 
