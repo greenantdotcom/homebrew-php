@@ -18,6 +18,7 @@ class Php56 < AbstractPhp
       "--enable-zend-signals",
       "--enable-dtrace",
       "--enable-opcache",
+      ## Causing issues on Mavericks
       "--disable-phpdbg"
     ]
   end
