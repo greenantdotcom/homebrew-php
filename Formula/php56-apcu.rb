@@ -1,4 +1,4 @@
-brrequire File.join(File.dirname(__FILE__), 'abstract-php-extension')
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php56Apcu < AbstractPhp56Extension
   init

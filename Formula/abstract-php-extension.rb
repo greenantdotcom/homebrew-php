@@ -216,3 +216,10 @@ class AbstractPhp55Extension < AbstractPhpExtension
     depends_on "php55" => opts unless build.include?('without-homebrew-php')
   end
 end
+
+class AbstractPhp56Extension < AbstractPhpExtension
+  def self.init opts=[]
+    super()
+    depends_on "php56" => opts unless build.include?('without-homebrew-php')
+  end
+end

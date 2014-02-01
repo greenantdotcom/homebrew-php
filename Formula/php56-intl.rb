@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php56Intl < AbstractPhp56Extension
   init
   homepage 'http://php.net/manual/en/book.intl.php'
-  url   PHP_DOWNLOAD_URL
-  sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
 
   depends_on 'icu4c'
 
