@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'abstract-php')
 class Php56 < AbstractPhp
   init
   url 'http://downloads.php.net/tyrael/php-5.6.0alpha1.tar.bz2'
-  md5 'd1ac1df6ff701546a005e2d9799d2002'
+  sha256 '17123fd1b07aa1cd16eedc9ae653dfbd560e2b7da95961f546334fda14bba804'
   version '5.6.0alpha1'
 
   head 'https://github.com/php/php-src.git', :branch => 'PHP-5.6'
@@ -18,6 +18,7 @@ class Php56 < AbstractPhp
       "--enable-zend-signals",
       "--enable-dtrace",
       "--enable-opcache",
+      "--disable-phpdbg"
     ]
   end
 
