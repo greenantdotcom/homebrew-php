@@ -11,7 +11,7 @@ class Php56Ioncubeloader < AbstractPhp56Extension
   def extension_type; "zend_extension"; end
 
   def install
-    prefix.install "ioncube_loader_dar_5.5.so" => "ioncubeloader.so"
+    prefix.install "ioncube_loader_dar_5.6.so" => "ioncubeloader.so"
     write_config_file unless build.include? "without-config-file"
   end
 end
